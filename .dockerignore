@@ -1,0 +1,5 @@
+/certs
+/letsencrypt
+/log
+/secrets
+docker-compose.yml

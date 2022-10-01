@@ -1,0 +1,33 @@
+---
+version: '3.8'
+
+secrets:
+  pkcs12_password:
+    file: secrets/pkcs12_password
+  cf_token:
+    file: secrets/cf_token
+
+services:
+  certbot:
+    build: .
+    container_name: certbot
+    secrets:
+      - pkcs12_password
+    volumes:
+      - ./certs:/certs
+      - ./letsencrypt:/etc/letsencrypt
+      - ./log:/var/log/letsencrypt
+    environment:
+      - DOMAINS=my.domain.com
+      - EMAIL=user@my.domain.com
+      - CERTBOT_PLUGIN=linode
+      - LINODE_API_KEY=your_api_key
+      - LINODE_API_VERSION=
+      - CLOUDFLARE_API_TOKEN=/run/secrets/cf_token
+      - PROPAGATION_SECONDS=220
+      - DEBUG=true
+      - STAGING=true
+      - CONCAT=false
+      - PKCS12_ENABLE=true
+      - PKCS12_PASSWORD_FILE=/run/secrets/pkcs12_password
+    restart: unless-stopped
