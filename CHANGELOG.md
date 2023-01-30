@@ -1,3 +1,11 @@
+## 0.0.3 (January 29, 2023)
+---
+
+**Updates:**
+
+  - Updated cerbot version from 1.31.0 to 2.2.0
+  - Updated jinja version from 2.11.3 to 3.1.2
+
 ## 0.0.2 (October 5, 2022)
 ---
 
