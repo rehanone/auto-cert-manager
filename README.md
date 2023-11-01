@@ -1,6 +1,6 @@
 ## auto-cert-manager
 
-![Docker Pulls](https://img.shields.io/docker/pulls/rehanone/auto-cert-manager) ![GitHub release (with filter)](https://img.shields.io/github/v/release/rehanone/auto-cert-manager)
+[![Docker Pulls](https://img.shields.io/docker/pulls/rehanone/auto-cert-manager)](https://hub.docker.com/r/rehanone/auto-cert-manager) [![GitHub release (with filter)](https://img.shields.io/github/v/release/rehanone/auto-cert-manager)](https://github.com/rehanone/auto-cert-manager)
 
 ---
 
