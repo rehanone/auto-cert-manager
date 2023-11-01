@@ -1,8 +1,6 @@
 ## auto-cert-manager
 
----
-
-Available on [Dockerhub](https://hub.docker.com/repository/docker/rehanone/auto-cert-manager#). The code is avalible on [Github](https://github.com/rehanone/auto-cert-manager)
+![Docker Pulls](https://img.shields.io/docker/pulls/rehanone/auto-cert-manager) ![GitHub release (with filter)](https://img.shields.io/github/v/release/rehanone/auto-cert-manager)
 
 ---
 
