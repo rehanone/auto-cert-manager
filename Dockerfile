@@ -1,8 +1,7 @@
 FROM alpine:3
 
-ARG CERTBOT_VERSION=2.7.4
-ARG PYTHON_VERSION=3.11
-ARG JINJA_VERSION=3.1.2
+ARG CERTBOT_VERSION=2.11.0
+ARG PYTHON_VERSION=3.12
 
 # set version label
 ARG BUILD_DATE
@@ -21,12 +20,16 @@ RUN apk add --update --no-cache \
     python3>=${PYTHON_VERSION} \
     # To generate and renew TLS certificate:
     certbot>=${CERTBOT_VERSION} \
+    # Install Certbot Cloudflare Plugin:
+    certbot-dns-cloudflare>=${CERTBOT_VERSION} \
+    # Install Certbot Linode Plugin:
+    certbot-dns-linode>=${CERTBOT_VERSION} \
+    # Install Python dependencies:
+    py3-jinja2 \
+    # Install openssl:
     openssl \
+    # Install bash:
     bash
-
-# Install dependencies.
-RUN python3 -m ensurepip && \
-    pip3 install jinja2==${JINJA_VERSION} certbot-dns-cloudflare==${CERTBOT_VERSION} certbot-dns-linode==${CERTBOT_VERSION}
 
 # Certbot dns plugin secerts file
 RUN mkdir -p /credentials && touch /credentials/dns-creds.ini
