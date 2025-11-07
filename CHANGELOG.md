@@ -1,3 +1,15 @@
+## 0.3.0 (November 7, 2025)
+---
+
+**Features:**
+
+  - Added support for `linux/arm64` image publishing on Dockerhub.
+
+**Updates:**
+
+  - Updated cerbot version from 2.11.0 to 5.1.0
+  - Updated python version from 3.12 to 3.14
+
 ## 0.2.0 (October 12, 2024)
 ---
 
